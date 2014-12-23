@@ -11,6 +11,7 @@
 			<header>
 				<div id="search-bar">
 					<form ng-submit="getUser()">
+						<span>The Personal Portfolio of </span>
 						<input type="text" ng-model="query" placeholder="User name.. (e.g. andela-calim)" autofocus>
 						<button type="submit">Search</button>
 					</form>
@@ -23,26 +24,25 @@
 						<h1>My Personal Portfolio</h1>
 						<ul>
 							<li>User Name: {{ query }}</li>
-							<li>Repo URL: {{ result[0] }} </li>
-							<li>Email Address: </li>
+							<li>Github URL: <a href="{{ results[0].userGithubURL }} "> {{ results[0].userGithubURL }}</a></li>
 							<li>Number of repositories: {{ results[0].repoNum }}</li>
 						</ul>
 					</section>
-					<img ng-src="{{ result[1] }}" alt="profile image" visibility="visible">
+					<img ng-src="{{ results[0].userImg }}" alt="profile image" visibility="visible">
 				</div>
 				<div id="main">
 					<ul>
 						<li ng-repeat="repo in repos">
 							<img ng-src="" alt="repo image">
 							<span id="name">Name: {{repo.full_name}}</span>
-							<span id="descp">Description: {{repo.description}}</span>
 							<span id="profi">Proficiency: </span>
+							<span id="descp">Description: {{repo.description}}</span>
 						</li>
 					</ul>
 				</div>
 			</section>
 
-			<footer>
+			<footer id="footer">
 				
 			</footer>
 		</div> <!-- end wrapper -->

@@ -1,8 +1,6 @@
 var ControllerModule = angular.module('ControllerModule', []);
 app.controller('mainController', function($scope, gitAPIservice) {
 
-	
-
 	$scope.getUser = function getUser() {
 		gitAPIservice.searchRepos($scope.query, function (error, data) {
 			if (!error) {
@@ -13,15 +11,11 @@ app.controller('mainController', function($scope, gitAPIservice) {
 
 				angular.forEach(data, function(value, index) {
 					
-
 					repoURL = $scope.query + '.github.io/' + value.name;
 					
-
 					userImg = value.owner['avatar_url'];
 					
-
 					userGithubURL = value.owner['html_url'];
-					
 
 					$scope.results.push({
 						repoURL: repoURL,
@@ -29,10 +23,9 @@ app.controller('mainController', function($scope, gitAPIservice) {
 						userGithubURL: userGithubURL,
 						repoNum: $scope.repoNum
 					});
-				
 				});
-				console.log($scope.results);
 				
+				console.log($scope.results);				
 			}
 		});
 	};

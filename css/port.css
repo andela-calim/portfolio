@@ -1,4 +1,9 @@
 
+html {
+	height: 100%;
+	font-family: lucida, sans-serif;
+}
+
 body, #wrapper, section {
 	margin: 0 auto;
 }
@@ -14,6 +19,10 @@ header, footer {
 	border-bottom: 1px solid #000;
 }
 
+#wrapper {
+	position: relative;
+}
+
 header{
 	height: 60px;
 	text-align: center;
@@ -21,6 +30,12 @@ header{
 
 #search-bar {
 	padding-top: 12px;
+}
+
+#search-bar span {
+	font-size: 1.5em;
+	color: #fff;
+	margin: 0 6px;
 }
 
 input {
@@ -45,7 +60,7 @@ button {
 	width: 85%;
 	border-color: #99205e;
 	border-width: 3px;
-	margin: 5px auto;
+	margin: 5px auto 40px;
 	border: 1px solid #000;
 }
 
@@ -72,6 +87,7 @@ button {
 	width: 100px;
 	height: 100px;
 	margin-right: 9%;
+	border-radius: 50%;
 }
 
 #main {
@@ -91,22 +107,27 @@ ul {
 	min-width: 50px;
 	display: inline-block;
 	margin: 2.5%;
-	padding-bottom: 5%;
 	font-size: 0.9em;
 }
 
 img {
 	text-align: center;
-	width: 50%;
+	width: 95%;
 	margin: 2.5%;
 	background-color: grey;
-	border-radius: 50%;
+	border-radius: 5px;
 }
 
-span {
+li span {
 	display: block;
 	background: #ccc;
-	margin: 3px;
+	height: 30px;
+	margin: 3px auto;
+	text-align: left;
+}
+
+#descp {
+	height: 2.5em;
 	text-align: left;
 }
 

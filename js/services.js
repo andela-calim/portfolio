@@ -6,7 +6,6 @@ app.factory('gitAPIservice', function gitAPIservice($http) {
 			$http.get('https://api.github.com/users/' + query + '/repos')
 			.success(function (data) {
 				callback(null, data);
-				// console.log(data);
 			})
 			.error(function (e) {
 				callback(e);
