@@ -1,0 +1,117 @@
+
+body, #wrapper, section {
+	margin: 0 auto;
+}
+
+header, footer {
+	border-bottom: 1px solid #000;
+}
+
+header, footer {
+	width: 100%;
+	background-color: #99205e;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+header{
+	height: 60px;
+	text-align: center;
+}
+
+#search-bar {
+	padding-top: 12px;
+}
+
+input {
+	width: 33.3%;
+	height: 25px;
+	padding: 0.1em 0.3em;
+	font-size: 1.5em;
+	border-radius: 5px;
+}
+
+button {
+	border: none;
+	border-radius: 5px;
+	font-size: 1.5em;
+	padding: 3px 5px;
+	margin: 0 5px;
+	background-color: #0062FF;
+	color: #fff;
+}
+
+#main-section {
+	width: 85%;
+	border-color: #99205e;
+	border-width: 3px;
+	margin: 5px auto;
+	border: 1px solid #000;
+}
+
+#banner h1 {
+	font-size: 1.5em;
+	margin-top: 2.5%;
+	margin-left: 12%;
+}
+
+#user-info {
+	float: left;
+	width: 70%;
+}
+
+#user-info ul {
+	text-align: left;
+	margin-top: 2.5%;
+	margin-left: 12%;
+	line-height: 1.33em;
+}
+
+#banner img {
+	float: right;
+	width: 100px;
+	height: 100px;
+	margin-right: 9%;
+}
+
+#main {
+	clear: both;
+}
+
+ul {
+	padding: 0;
+	text-align: center;
+}
+
+#main li {
+	list-style: none;
+	border: 1px solid #000;
+	border-radius: 5px;
+	width: 25%;
+	min-width: 50px;
+	display: inline-block;
+	margin: 2.5%;
+	padding-bottom: 5%;
+	font-size: 0.9em;
+}
+
+img {
+	text-align: center;
+	width: 50%;
+	margin: 2.5%;
+	background-color: grey;
+	border-radius: 50%;
+}
+
+span {
+	display: block;
+	background: #ccc;
+	margin: 3px;
+	text-align: left;
+}
+
+footer {
+	height: 30px;
+	position: fixed;
+	bottom: 0;
+}

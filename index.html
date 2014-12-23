@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/css-reset.css">
+		<link rel="stylesheet" type="text/css" href="css/port.css">
+		<title>My Github Portfolio</title>
+	</head>
+	<body ng-app="portfolioApp" ng-controller="mainController" ng-init="init()">
+		<div id="wrapper">
+			<header>
+				<div id="search-bar">
+					<form ng-submit="getUser()">
+						<input type="text" ng-model="query" placeholder="User name.. (e.g. andela-calim)" autofocus>
+						<button type="submit">Search</button>
+					</form>
+				</div>
+			</header>
+
+			<section id="main-section">
+				<div id="banner">
+					<section id="user-info">
+						<h1>My Personal Portfolio</h1>
+						<ul>
+							<li>User Name: {{ query }}</li>
+							<li>Repo URL: {{ result[0] }} </li>
+							<li>Email Address: </li>
+							<li>Number of repositories: {{ results[0].repoNum }}</li>
+						</ul>
+					</section>
+					<img ng-src="{{ result[1] }}" alt="profile image" visibility="visible">
+				</div>
+				<div id="main">
+					<ul>
+						<li ng-repeat="repo in repos">
+							<img ng-src="" alt="repo image">
+							<span id="name">Name: {{repo.full_name}}</span>
+							<span id="descp">Description: {{repo.description}}</span>
+							<span id="profi">Proficiency: </span>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<footer>
+				
+			</footer>
+		</div> <!-- end wrapper -->
+
+		<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/services.js"></script>
+		<script type="text/javascript" src="js/controllers.js"></script>
+	</body>
+</html>
